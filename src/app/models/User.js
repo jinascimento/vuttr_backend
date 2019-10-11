@@ -8,10 +8,6 @@ class User extends Model {
         email: Sequelize.STRING,
         password: Sequelize.VIRTUAL,
         password_hash: Sequelize.STRING,
-        state: {
-          type: Sequelize.ENUM,
-          values: ['active', 'inactive'],
-        },
       },
       {
         sequelize,
