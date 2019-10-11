@@ -3,6 +3,7 @@ import cors from 'cors';
 import authMiddleware from './app/middlewares/auth';
 import UserController from './app/controllers/UserController';
 import SessionController from './app/controllers/SessionController';
+import ToolController from './app/controllers/ToolController';
 
 const routes = new Router();
 
@@ -16,5 +17,8 @@ routes.use(authMiddleware);
 
 // Users
 routes.put('/users', UserController.update);
+
+// Tools
+routes.post('/tools', ToolController.store);
 
 export default routes;
