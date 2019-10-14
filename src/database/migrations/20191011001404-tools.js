@@ -21,7 +21,7 @@ module.exports = {
         allowNull: true,
       },
       tags: {
-        type: Sequelize.STRING,
+        type: Sequelize.ARRAY(Sequelize.TEXT),
         allowNull: true,
       },
       user_id: {

@@ -21,7 +21,10 @@ class ToolController {
     }
 
     req.body.user_id = req.userId;
-    const { id, title, description, tags, link } = await Tool.create(req.body);
+    const { id, title, description, tags, link } = await Tool.create(
+      req.body,
+      {}
+    );
 
     return res.status(201).json({
       id,

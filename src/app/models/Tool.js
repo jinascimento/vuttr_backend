@@ -7,7 +7,7 @@ class Tool extends Model {
         title: Sequelize.STRING,
         description: Sequelize.STRING,
         link: Sequelize.STRING,
-        tags: Sequelize.STRING,
+        tags: Sequelize.ARRAY(Sequelize.TEXT),
       },
       {
         sequelize,
