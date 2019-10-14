@@ -20,5 +20,6 @@ routes.put('/users', UserController.update);
 
 // Tools
 routes.post('/tools', ToolController.store);
+routes.delete('/tools/:id', ToolController.delete);
 
 export default routes;
