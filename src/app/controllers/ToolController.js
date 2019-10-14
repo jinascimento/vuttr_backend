@@ -36,7 +36,9 @@ class ToolController {
   }
 
   async index(req, res) {
+    const searchTag = req.query.tag ? { tags: [req.query.tag] } : {};
     const tools = await Tool.findAll({
+      where: searchTag,
       attributes: ['id', 'title', 'link', 'description', 'tags'],
     });
     return res.json(tools);
