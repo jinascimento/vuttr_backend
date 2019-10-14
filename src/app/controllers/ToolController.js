@@ -35,6 +35,13 @@ class ToolController {
     });
   }
 
+  async index(req, res) {
+    const tools = await Tool.findAll({
+      attributes: ['id', 'title', 'link', 'description', 'tags'],
+    });
+    return res.json(tools);
+  }
+
   async delete(req, res) {
     const { id } = req.params;
     await Tool.destroy({
